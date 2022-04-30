@@ -2,7 +2,6 @@ const express = require("express");
 const bodyParser = require("body-parser");
 const mongoose = require("mongoose");
 const ejs = require("ejs");
-const port = 3000;
 
 const app = express();
 app.use(bodyParser.urlencoded({extended: true}));
@@ -446,6 +445,11 @@ app.get("/checkout", function(req, res){
 
 
 //Server Listening
+let port = process.env.PORT;
+if(port == null || port == ""){
+  port = 3000;
+}
+
 app.listen(port, function(req, res){
-  console.log("Server listening in port 3000...");
+  console.log("Server started successfully...");
 });
