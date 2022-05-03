@@ -7,7 +7,7 @@ const app = express();
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(express.static("public"));
 app.set("view engine", "ejs");
-mongoose.connect("mongodb+srv://pranaavs2003:pranaavs2003@cluster0.qur1o.mongodb.net/RentSetGO", {useNewUrlParser: true});
+mongoose.connect("mongodb+srv://<PASSWORD>@cluster0.qur1o.mongodb.net/RentSetGO", {useNewUrlParser: true});
 
 
 //Database code
